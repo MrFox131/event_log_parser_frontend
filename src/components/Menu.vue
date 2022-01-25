@@ -17,7 +17,6 @@ export default {
   flex-direction: row;
   flex-grow: 0;
   padding: 30px;
-  position: sticky;
   top:0;
   justify-content: center;
   a {

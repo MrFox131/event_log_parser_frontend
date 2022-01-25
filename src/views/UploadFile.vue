@@ -46,12 +46,12 @@ export default {
       .then((result)=>{
         let response = parseJSONFromString(result.data)
         if (response.result !== "success"){
-          console.log("not okkkkkk")
+          console.error("Error occurred while uploading file")
           formSuccess.value = false;
           return
         }
         formSuccess.value = true;
-        console.log("okkkk")
+        console.log("ok")
       })
       .catch((error)=>{
         formSuccess.value = false;

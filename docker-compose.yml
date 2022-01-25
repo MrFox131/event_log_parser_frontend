@@ -1,24 +1,20 @@
 version: '3.5'
-
 services:
   vue_app:
     build: .
     networks:
       - xrx_network
-
   xrx:
-    image: xrx:latest
+    image: 'mrfox131/xrx:latest'
     networks:
       - xrx_network
-
   nginx:
-    image: nginx:1.13
+    image: 'nginx:1.13'
     ports:
-      - "80:80"
+      - '80:80'
     networks:
       - xrx_network
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-
+      - './nginx.conf:/etc/nginx/nginx.conf'
 networks:
-  xrx_network:
+  xrx_network: null
